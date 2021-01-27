@@ -15,6 +15,7 @@ djangorestframework = "*"
 pyjwt = "*"
 pipenv-to-requirements = "*"
 django-dotenv = "*"
+sentry-sdk = "*"
 
 [requires]
 python_version = "3.9"

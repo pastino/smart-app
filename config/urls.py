@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/v1/users/", include("users.urls")),
     path("api/v1/posts/", include("posts.urls")),
     path("api/v1/comments/", include("comments.urls")),
+    path("sentry-debug/", trigger_error),
 ]
